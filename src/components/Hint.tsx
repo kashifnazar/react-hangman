@@ -1,10 +1,10 @@
 import React from 'react'
+import useGameContext from '../context/useGameContext'
 
-type Props = {
-    hint: string
-}
+function Hint() {
 
-function Hint({ hint }: Props) {
+  const { hint } = useGameContext()
+
   return (
     <div className='hint'>Hint: {hint}</div>
   )
