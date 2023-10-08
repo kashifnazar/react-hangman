@@ -1,13 +1,77 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --background: #282c34;
+  --main-text: #61b390;
+  --mistaike: #D14646;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root {
+  height: 100vh;
+}
+
+html {
+  height: 100vh;
+}
+
+head {
+  height: 100vh;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--main-text);
+  width: 100%;
+  height: 100vh;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.hint {
+  font-size: 24px;
+}
+
+.board {
+  display: flex;
+  margin-top: 3rem;
+}
+
+.word-box {
+  width: 75px;
+  height: 75px;
+  border: 1px solid var(--main-text);
+  color: var(--main-text);
+  margin-left: 1rem;
+  text-transform: capitalize;
+  font-size: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.word-box.space {
+  border: none;
+}
+
+.word-box.played {
+  
+}
+
+.mistakes {
+  margin-top: 3rem;
+  color: var(--mistaike);
+  font-size: 75px;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.word-box.mistake {
+  margin-left: 1rem;
+  border-color: var(--mistaike);
+  color: var(--mistaike);
 }
